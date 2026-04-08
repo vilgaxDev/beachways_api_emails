@@ -64,7 +64,7 @@ class BookingController extends Controller
 
             // Send emails
             try {
-                Mail::to('info@beachwaysgroup.com')->send(new ContactSubmissionMail($request->all()));
+                Mail::to('test@ardhiworth.co.ke')->send(new ContactSubmissionMail($request->all()));
                 Mail::to($request->email)->send(new UserConfirmationMail($request->all()));
 
                 Log::info('Emails queued successfully');

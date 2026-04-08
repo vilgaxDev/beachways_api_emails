@@ -10,12 +10,10 @@
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
           
-          <!-- Header with Logo -->
+          <!-- Header -->
           <tr>
-            <td align="center" style="padding:20px; background:#ff5ca2;">
-<img src="{{ asset('images/beachways-logo.png') }}" alt="Beachways Logo" style="max-width:200px; height:auto;" />
-
-
+            <td align="center" style="padding:20px; background:#133236;">
+               <img src="{{ $message->embed(public_path('img/logo.png')) }}" alt="Ardhiworth Logo" style="max-width: 200px; height: auto; filter: brightness(0) invert(1);">
             </td>
           </tr>
 
@@ -30,7 +28,7 @@
           <!-- Submission Details -->
           <tr>
             <td style="padding:20px;">
-              <h3 style="margin-top:0; color:#ff5ca2;">Your Submission Details</h3>
+              <h3 style="margin-top:0; color:#133236;">Your Submission Details</h3>
               <table width="100%" cellpadding="5" cellspacing="0" style="border-collapse:collapse;">
                 <tr>
                   <td style="font-weight:bold; width:30%;">Name:</td>
@@ -81,15 +79,15 @@
           <!-- Closing -->
           <tr>
             <td style="padding:20px; text-align:center;">
-              <p style="margin:0; font-size:14px; color:#555;">Thank you for choosing us! 🌊<br>We’ll be in touch shortly.</p>
-              <p style="margin-top:10px; font-weight:bold; color:#333;">Best regards,<br>Beachways Group Team</p>
+              <p style="margin:0; font-size:14px; color:#555;">Thank you for choosing us!<br>We’ll be in touch shortly.</p>
+              <p style="margin-top:10px; font-weight:bold; color:#333;">Best regards,<br>Ardhiworth Team</p>
             </td>
           </tr>
 
           <!-- Footer -->
           <tr>
-            <td align="center" style="padding:15px; background:#ff5ca2; color:#fff; font-size:12px;">
-              Beachways © {{ date('Y') }} | Ride on the Wave 🌊
+            <td align="center" style="padding:15px; background:#133236; color:#fff; font-size:12px;">
+              Ardhiworth © {{ date('Y') }} | Your Property Partner
             </td>
           </tr>
           

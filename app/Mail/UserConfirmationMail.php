@@ -25,7 +25,7 @@ class UserConfirmationMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("Thank you for contacting Beachways Group")
+        return $this->subject("Thank you for contacting Ardhiworth")
                     ->view('emails.user-confirmation')
                     ->with(['data' => $this->data]);
     }

@@ -9,13 +9,10 @@
     <tr>
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-          
-          <!-- Header with Logo -->
+          <!-- Header -->
           <tr>
-            <td align="center" style="padding:20px; background:#ff5ca2;">
-          <img src="{{ asset('images/beachways-logo.png') }}" alt="Beachways Logo" style="max-width:200px; height:auto;" />
-
-
+            <td align="center" style="padding:20px; background:#133236;">
+               <img src="{{ $message->embed(public_path('img/logo.png')) }}" alt="Ardhiworth Logo" style="max-width: 200px; height: auto; filter: brightness(0) invert(1);">
             </td>
           </tr>
 
@@ -79,8 +76,8 @@
 
           <!-- Footer -->
           <tr>
-            <td align="center" style="padding:15px; background:#ff5ca2; color:#fff; font-size:12px;">
-              Beachways © {{ date('Y') }} | Ride on the Wave 🌊
+            <td align="center" style="padding:15px; background:#133236; color:#fff; font-size:12px;">
+              Ardhiworth © {{ date('Y') }} | Sent from <a href="https://admins.ardhiworth.co.ke" style="color: #fff; font-weight: bold; text-decoration: underline;">Ardhiworth Admin Dashboard</a>
             </td>
           </tr>
         </table>

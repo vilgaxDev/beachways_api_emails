@@ -1,8 +1,24 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Redirect everything to public/
-    RewriteCond %{REQUEST_URI} !^/public
-    RewriteRule ^(.*)$ public/$1 [L]
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+    # Handle OPTIONS preflight requests
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule .* - [R=204,L]
+
+    # CORS Headers
+    SetEnvIf Origin "https?://(localhost:3000|127.0.0.1:3000|admins\.ardhiworth\.co\.ke|ardhiworth\.co\.ke)$" AccessControlAllowOrigin=$0
+    Header set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" env=AccessControlAllowOrigin
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN, Accept" env=AccessControlAllowOrigin
+    Header set Access-Control-Allow-Credentials "true" env=AccessControlAllowOrigin
+    Header set Access-Control-Max-Age "86400" env=AccessControlAllowOrigin
+
+    # Redirect everything to the root index.php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
 </IfModule>
